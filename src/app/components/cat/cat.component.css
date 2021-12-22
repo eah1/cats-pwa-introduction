@@ -1,0 +1,12 @@
+div {
+  width: 80%;
+}
+
+mat-tab-group {
+  width: 50%;
+  height: 50%;
+}
+
+mat-card-footer img {
+ width: 50%;
+}

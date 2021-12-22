@@ -1,0 +1,25 @@
+<div class="card-wrapper">
+  <div *ngIf="cat" class="row animate__animated animate__bounce animate__fadeIn">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title><strong>Breed:</strong> {{cat.name}}</mat-card-title>
+        <mat-card-subtitle><strong>Short breed:</strong> {{cat.id}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{cat.temperament}}</p>
+        <h2>show all details</h2>
+        <mat-tab-group animationDuration="0ms">
+          <mat-tab label="Origin">{{cat.origin}}</mat-tab>
+          <mat-tab label="Life years">{{cat.life_span}}</mat-tab>
+          <mat-tab label="Wikipedia Info"><a href="{{cat.wikipedia_url}}">Link {{cat.name}}</a></mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+      <mat-card-footer>
+        <img mat-card-image src="https://cdn2.thecatapi.com/images/{{cat.reference_image_id}}.jpg" alt="Photo {{cat.name}}"/>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  <div class="col-md-3">
+    <a class="btn btn-danger" routerLink="/">Back</a>
+  </div>
+</div>
