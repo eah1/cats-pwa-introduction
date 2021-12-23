@@ -10,13 +10,16 @@ import {Cat} from "../../model/cat.interface";
 export class CatsComponent implements OnInit {
 
   cats: Cat[] = []
+  loaded!: boolean;
 
-  constructor(private catsService: CatsService) { }
+  constructor(private catsService: CatsService) {
+    this.loaded = true;
+  }
 
   ngOnInit(): void {
     this.catsService.getAllCats().subscribe((cats) => {
-      console.log(cats)
       this.cats = cats
+      this.loaded = false;
     });
   }
 

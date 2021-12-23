@@ -1,5 +1,22 @@
-div {
-  width: 80%;
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container-uoc {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.example-card div {
+  width: 40%;
 }
 
 mat-tab-group {
@@ -9,4 +26,11 @@ mat-tab-group {
 
 mat-card-footer img {
  width: 50%;
+}
+
+@media screen and (min-width: 800px) {
+  .container-uoc {
+    width: 75%;
+    margin:0 auto;
+  }
 }

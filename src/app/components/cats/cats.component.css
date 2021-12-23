@@ -1,9 +1,33 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container-uoc {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
 .list-group-item .list-group-item-action .animate__animated .animate__bounce .animate__fadeIn div {
- width: 50%;
+  width: 50%;
   height: 30%;
 }
 
 img {
   width: 400px;
   height: 400px;
+}
+
+@media screen and (min-width: 800px) {
+  .container-uoc {
+    width: 75%;
+    margin:0 auto;
+  }
 }

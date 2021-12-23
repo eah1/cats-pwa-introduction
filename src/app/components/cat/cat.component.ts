@@ -25,7 +25,6 @@ export class CatComponent implements OnInit {
       }
 
       this.cat = cat[0];
-      console.log(this.cat)
     })
   }
 }
